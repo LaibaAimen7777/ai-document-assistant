@@ -36,7 +36,8 @@ def add_documents(collection, chunks, embeddings, metadatas=None):
         return
 
     if metadatas is None:
-        metadatas = [{} for _ in chunks]
+        metadatas = [{"chunk_index":i}
+                     for i in range(len(chunks))]
 
     if len(metadatas) != len(chunks):
         raise ValueError(
