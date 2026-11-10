@@ -5,7 +5,7 @@ from src.text_splitter import split_text
 from src.embeddings import generate_embeddings
 from src.vector_store import get_vector_store, add_documents
 
-def injest_pdf(
+def ingest_pdf(
         pdf_path,
         persistent_dictionary="chrome_db",
         collection_name="document_chunks"
